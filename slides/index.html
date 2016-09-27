@@ -104,10 +104,13 @@
 			.reveal .fs-0-68{font-size:68%;}
 			.reveal .fs-0-78{font-size:78%;}
             .force-normal-case{text-transform:none;}
-.code-wrap{margin-top:0px;padding-top:0px;width:100%;text-align:center;}
-.code-wrap pre code{width:100%;}
-.code-wrap .inline-pre-code{width:95%;}
-.code-wrap pre code,.code-wrap .inline-pre-code{text-align: center;margin:0px auto;}
+            .reveal .fauxH{font-weight:bold;padding-bottom:0px;margin:0px;}
+            .code-wrap--fauxH{text-align:left;padding-left:38px !important;}
+
+            .code-wrap{margin-top:0px;padding-top:0px;width:100%;text-align:center;}
+            .code-wrap pre code{width:100%;}
+            .code-wrap .inline-pre-code{width:95%;}
+            .code-wrap pre code,.code-wrap .inline-pre-code{text-align: center;margin:0px auto;}
 
 		</style>
 	</head>
@@ -171,24 +174,62 @@
 				</section>
 				<section data-transition="fade-in">
 					<h2><pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre></h2>
+<p class="code-wrap--fauxH fauxH">Init</p>
 <div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>npm init</code></pre></div>
+<p class="code-wrap--fauxH fauxH">Development</p>
 <div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>npm install &lt;new-module&gt; --save-dev</code></pre></div>
+<p class="code-wrap--fauxH fauxH">Completed Feature</p>
 <div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>npm install &lt;new-module&gt; --save</code></pre></div>
 <!-- &lt;xxxxxxx&gt; -->
 				</section>
 				<section data-transition="fade-in">
-					<h2><pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre></h2>
+					<h2>In the workflow</h2>
+<p class="code-wrap--fauxH fauxH">Init</p>
 <div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>cd ~/projects &amp;&amp; mkdir &lt;pkg-name&gt; &amp;&amp; cd &lt;pkg-name&gt;/ &amp;&amp;
+    git init &amp;&amp;
     git clone git@github.com:&lt;gitusername&gt;/&lt;your-prefix&gt;-&lt;pkg-name&gt;.git . &amp;&amp;
     npm init</code></pre></div>
+<p class="code-wrap--fauxH fauxH">Development</p>
 <div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>npm install &lt;new-module&gt; --save-dev &amp;&amp;
     git add package.json &amp;&amp;
     git commit -m "Changed package.json"</code></pre></div>
+<p class="code-wrap--fauxH fauxH">Completed Feature</p>
 <div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>npm install &lt;new-module&gt; --save &amp;&amp;
     git commit -am "Progress Commit" &amp;&amp;
     git push</code></pre></div>
+				</section>
+
+				<section data-transition="fade-in">
+					<h2><pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json {scripts}</code></pre></h2>
+<div class=""><pre class="inline-pre-code fs-0-48"><code class="json" data-trim>{
+"scripts":{
+    "preinstall": "mkdir -p _cache/ &amp;&amp; chmod 777 _cache/",
+    "install": "node install.js",
+    "start": "node index.js",
+    "uninstall": "node uninstall.js &amp;&amp; rm -rf _cache",
+    "test": "node test.js"
+    }
+}</code></pre></div>
 <!-- &lt;xxxxxxx&gt; -->
 				</section>
+
+                <section data-transition="fade-in" id="test-driven-dev">
+                    <h2>Test Driven Development (TDD)</h2>
+
+                    <div style="position:relative;width:80%;margin:0px auto;">
+                        <img src="img/relax.gif" class="plain-img" style="width:100%;" />
+                    </div>
+
+                </section>
+
+                <section data-transition="fade-in" id="node-all-the-things">
+                    <h2>Node all the things</h2>
+
+                    <div style="position:relative;width:80%;margin:0px auto;">
+                        <img src="img/node-all-the-things.jpg" class="plain-img" style="width:100%;" />
+                    </div>
+
+                </section>
 
                 <section data-transition="fade-in" id="objects-objects-objects">
                     <h2>Objects! Objects! Objects!</h2>
