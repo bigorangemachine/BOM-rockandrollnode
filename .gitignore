@@ -1,3 +1,6 @@
+fonts/
+fonts/*
+
 # Logs
 logs
 *.log
