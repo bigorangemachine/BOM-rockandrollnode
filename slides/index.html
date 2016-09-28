@@ -168,6 +168,8 @@
             .code-wrap .inline-pre-code{width:95%;}
             .code-wrap pre code,.code-wrap .inline-pre-code{text-align: center;margin:0px auto;}
 
+            .reveal section .gitpadd{display:inline;padding-left:18px;}
+            .reveal section .gitpadd img{display:inline;box-shadow:none;border:none;background-color:#ffffff;width:45px;margin:0px;padding:3px}
 		</style>
 	</head>
 
@@ -238,23 +240,54 @@
 <div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>npm install &lt;new-module&gt; --save</code></pre></div>
 <!-- &lt;xxxxxxx&gt; -->
 				</section>
+
 				<section data-transition="fade-in">
-					<h2>In the workflow</h2>
+    				<section>
+    					<h2><pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div></h2>
 <p class="code-wrap--fauxH fauxH">Init</p>
 <div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>cd ~/projects &amp;&amp; mkdir &lt;pkg-name&gt; &amp;&amp; cd &lt;pkg-name&gt;/ &amp;&amp;
+git init &amp;&amp;
+git remote add origin https://github.com/username/PRE-repo.git &amp;&amp;
+npm init</code></pre></div>
+<p class="code-wrap--fauxH fauxH">Development</p>
+<div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>npm install &lt;new-module&gt; --save-dev &amp;&amp;
+git add package.json &amp;&amp;
+git commit -m "Changed package.json"</code></pre></div>
+<p class="code-wrap--fauxH fauxH">Completed Feature</p>
+<div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>npm install &lt;new-module&gt; --save &amp;&amp;
+git commit -am "Progress Commit" &amp;&amp;
+git push</code></pre></div>
+    				</section>
+        				<section>
+        					<h2><pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div></h2>
+    <p class="code-wrap--fauxH fauxH">Init</p>
+    <div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>cd ~/projects &amp;&amp; mkdir &lt;pkg-name&gt; &amp;&amp; cd &lt;pkg-name&gt;/ &amp;&amp;
     git init &amp;&amp;
     git remote add origin https://github.com/username/PRE-repo.git &amp;&amp;
     npm init</code></pre></div>
-<p class="code-wrap--fauxH fauxH">Development</p>
-<div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>npm install &lt;new-module&gt; --save-dev &amp;&amp;
+        				</section>
+        				<section>
+        					<h2><pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div></h2>
+    <p class="code-wrap--fauxH fauxH">Development</p>
+    <div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>npm install &lt;new-module&gt; --save-dev &amp;&amp;
     git add package.json &amp;&amp;
     git commit -m "Changed package.json"</code></pre></div>
-<p class="code-wrap--fauxH fauxH">Completed Feature</p>
-<div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>npm install &lt;new-module&gt; --save &amp;&amp;
+        				</section>
+        				<section>
+        					<h2><pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div></h2>
+    <p class="code-wrap--fauxH fauxH">Completed Feature</p>
+    <div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>npm install &lt;new-module&gt; --save &amp;&amp;
     git commit -am "Progress Commit" &amp;&amp;
     git push</code></pre></div>
-				</section>
+        				</section>
+        				<section>
+        					<h2><pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div></h2>
+    <p class="code-wrap--fauxH fauxH">Production (no dev dependencies)</p>
+    <div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>git pull &amp;&amp;
+    npm install --production</code></pre></div>
+        				</section>
 
+                </section>
 				<section data-transition="fade-in">
 					<h2><pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json {scripts}</code></pre></h2>
 <div class=""><pre class="inline-pre-code fs-0-48"><code class="json" data-trim>{
