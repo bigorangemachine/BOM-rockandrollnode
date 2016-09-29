@@ -245,46 +245,54 @@
     				<section>
     					<h2><pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div></h2>
 <p class="code-wrap--fauxH fauxH">Init</p>
-<div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>cd ~/projects &amp;&amp; mkdir &lt;pkg-name&gt; &amp;&amp; cd &lt;pkg-name&gt;/ &amp;&amp;
-git init &amp;&amp;
+<div class="code-wrap smaller"><pre class="inline-pre-code fs-0-48"><code data-trim>cd ~/projects &amp;&amp; mkdir &lt;pkg-name&gt; &amp;&amp; cd &lt;pkg-name&gt;/ &amp;&amp;
+git init &amp;&amp; git push -u origin master &amp;&amp;
 git remote add origin https://github.com/username/PRE-repo.git &amp;&amp;
 npm init</code></pre></div>
 <p class="code-wrap--fauxH fauxH">Development</p>
-<div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>npm install &lt;new-module&gt; --save-dev &amp;&amp;
+<div class="code-wrap smaller"><pre class="inline-pre-code fs-0-48"><code data-trim>npm install &lt;new-module&gt; --save-dev &amp;&amp;
 git add package.json &amp;&amp;
 git commit -m "Changed package.json"</code></pre></div>
 <p class="code-wrap--fauxH fauxH">Completed Feature</p>
-<div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>npm install &lt;new-module&gt; --save &amp;&amp;
+<div class="code-wrap smaller"><pre class="inline-pre-code fs-0-48"><code data-trim>npm install &lt;new-module&gt; --save &amp;&amp;
 git commit -am "Progress Commit" &amp;&amp;
 git push</code></pre></div>
     				</section>
         				<section>
-        					<h2><pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div></h2>
-    <p class="code-wrap--fauxH fauxH">Init</p>
-    <div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>cd ~/projects &amp;&amp; mkdir &lt;pkg-name&gt; &amp;&amp; cd &lt;pkg-name&gt;/ &amp;&amp;
-    git init &amp;&amp;
-    git remote add origin https://github.com/username/PRE-repo.git &amp;&amp;
-    npm init</code></pre></div>
+        					<h2>Init <pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div></h2>
+<p class="code-wrap--fauxH fauxH smaller">Setup Project Folder</p>
+<div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>cd ~/projects &amp;&amp; mkdir &lt;pkg-name&gt; &amp;&amp; cd &lt;pkg-name&gt;/</code></pre></div>
+<p class="code-wrap--fauxH fauxH smaller">Setup git</p>
+<div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>git init &amp;&amp; git push -u origin master</code></pre></div>
+<p class="code-wrap--fauxH fauxH smaller">Set git to your repo</p>
+<div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>git remote add origin https://github.com/username/PRE-repo.git</code></pre></div>
+<p class="code-wrap--fauxH fauxH smaller">Create your node project file (Wizard)</p>
+<div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>npm init</code></pre></div>
         				</section>
         				<section>
-        					<h2><pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div></h2>
-    <p class="code-wrap--fauxH fauxH">Development</p>
-    <div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>npm install &lt;new-module&gt; --save-dev &amp;&amp;
-    git add package.json &amp;&amp;
-    git commit -m "Changed package.json"</code></pre></div>
+        					<h2>Development<pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div></h2>
+<p class="code-wrap--fauxH fauxH smaller">Development with new module</p>
+<div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>npm install &lt;new-module&gt; --save-dev</code></pre></div>
+<p class="code-wrap--fauxH fauxH smaller">Capture new package.json</p>
+<div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>git add package.json</code></pre></div>
+<p class="code-wrap--fauxH fauxH smaller">Setup</p>
+<div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>git commit -m "Changed package.json"</code></pre></div>
         				</section>
         				<section>
-        					<h2><pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div></h2>
-    <p class="code-wrap--fauxH fauxH">Completed Feature</p>
-    <div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>npm install &lt;new-module&gt; --save &amp;&amp;
-    git commit -am "Progress Commit" &amp;&amp;
-    git push</code></pre></div>
+        					<h2>Completed<pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div></h2>
+<p class="code-wrap--fauxH fauxH smaller">Move module out of 'dev only' and into 'production'</p>
+<div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>npm install &lt;new-module&gt; --save</code></pre></div>
+<p class="code-wrap--fauxH fauxH smaller">Add all files &amp; commit</p>
+<div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>git commit -am "Progress Commit"</code></pre></div>
+<p class="code-wrap--fauxH fauxH smaller">Make it public</p>
+<div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>git push</code></pre></div>
         				</section>
         				<section>
-        					<h2><pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div></h2>
-    <p class="code-wrap--fauxH fauxH">Production (no dev dependencies)</p>
-    <div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>git pull &amp;&amp;
-    npm install --production</code></pre></div>
+        					<h2>Production<pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div></h2>
+    <p class="code-wrap--fauxH fauxH smaller">Update code</p>
+<div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>git pull</code></pre></div>
+<p class="code-wrap--fauxH fauxH smaller">Exclude dev modules</p>
+<div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>npm install --production</code></pre></div>
         				</section>
 
                 </section>
@@ -310,24 +318,55 @@ git push</code></pre></div>
 <div class="smaller"><pre class="inline-pre-code fs-0-48"><code class="json" data-trim>{
   "name": "node-default-server",
   "version": "0.0.0",
-  "description": "Default Express Server for the LoLz",
+  "description": "Node for the LoLz",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bigorangemachine/BOM-default-server.git"
+    "url": "git+https://github.com/username/PRE-repo.git"
   },
   "author": "BigOrangeMachine",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/bigorangemachine/BOM-default-server/issues"
+    "url": "https://github.com/username/PRE-repo/issues"
   },
-  "homepage": "https://github.com/bigorangemachine/BOM-default-server#readme",
+  "homepage": "https://github.com/username/PRE-repo#readme",
   "dependencies": {
     ...
   },
   "scripts":{
     ...
   }
+}
+</code></pre></div>
+<!-- &lt;xxxxxxx&gt; -->
+    				</section>
+    				<section data-transition="fade-in">
+					<h2><pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json {scripts}</code></pre></h2>
+<div class="smaller"><pre class="inline-pre-code fs-0-48"><code class="json" data-noescape>{
+  "name": "node-default-server",
+  "version": "0.0.0",
+  "description": "Node for the LoLz",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/username/PRE-repo.git"
+  },
+  "author": "BigOrangeMachine",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/username/PRE-repo/issues"
+  },
+  "homepage": "https://github.com/username/PRE-repo#readme",
+  "dependencies": {
+    ...
+  },<mark>
+  "scripts":{
+      "preinstall": "mkdir -p _cache/ &amp;&amp; chmod 777 _cache/",
+      "install": "node install.js",
+      "start": "node index.js",
+      "uninstall": "node uninstall.js &amp;&amp; rm -rf _cache",
+      "test": "node test.js"
+  }</mark>
 }
 </code></pre></div>
 <!-- &lt;xxxxxxx&gt; -->
