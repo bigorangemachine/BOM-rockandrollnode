@@ -118,6 +118,7 @@
 			.reveal .smaller{font-size:68%;}
 			.orange{color:#FF9900;}
 			.reveal section img.plain-img{margin:0px;padding:0px;background:transparent;border:none;box-shadow:none;max-width:none;max-height:none;}
+            .reveal section img.borderless-img{border:none;box-shadow:none;}
 			.reveal .code-title{font-family:'Courier';text-transform:none;font-weight:normal;}
 			.reveal .code-title.code-smaller{font-size:88%;}
 			/*FLEX SAMPLE LAYOUT*/
@@ -169,6 +170,7 @@
             .code-wrap .inline-pre-code{width:95%;}
             .code-wrap pre code,.code-wrap .inline-pre-code{text-align: center;margin:0px auto;}
             .code-wrap.code-wrap--algnleft pre code,.code-wrap.code-wrap--algnleft .inline-pre-code{text-align:left;}
+            .code-wrap.code-wrap--bottom-mar pre code,.code-wrap.code-wrap--bottom-mar .inline-pre-code{margin-bottom:15px;}
 
             .reveal section .gitpadd{display:inline;padding-left:18px;}
             .reveal section .gitpadd img{display:inline;box-shadow:none;border:none;background-color:#ffffff;width:45px;margin:0px;padding:3px}
@@ -178,6 +180,7 @@
             .reveal .short-bit .short-path{color:#42AFFA;}
             .reveal .short-git{padding-right:40px;color:#ffffff;}
             .reveal .short-git .short-path{color:#FF9900;}
+            mark > *, mark *{color:#000000 !important;}
 		</style>
 	</head>
 
@@ -199,7 +202,7 @@
 					<div style="text-align:left;width:53%;margin-left:auto;margin-right:auto;float:left;">
 						<p>Topics</p>
 						<ul class="fs-0-78">
-							<li><a href="#/packagejson">Package.json</a></li>
+							<li><a href="#/packagejson">Package.json + Workflow</a></li>
 							<li><a href="#/custom-npm">Custom NPM modules</a></li>
 							<li><a href="#/node-all-the-things">Node all the things</a></li>
                             <li><a href="#/test-driven-dev">Test Driven Development</a></li>
@@ -219,92 +222,85 @@
 					<p class="fragment"><span class="smaller">bigorangemachine.github.io/<span class="m-grey" style="font-weight:bold;font-size:125%;">BOM-</span><span class="orange" style="">rockandrollnode/</span></span></p>
 				</section>
 
-
-
 				<section data-transition="fade-in" id="packagejson">
 					<h2><pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre></h2>
-
                     <div style="width:80%;clear:both;margin:0px auto;"><img class="plain-img" src="img/neo-hover.gif" style="width:100%;"/></div>
-
-
-
-
 				</section>
+
 				<section data-transition="fade-in">
 					<h2><pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre></h2>
 <p class="code-wrap--fauxH fauxH">Init</p>
-<div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>npm init</code></pre></div>
+<div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code class="bash" data-trim>npm init</code></pre></div>
 <p class="code-wrap--fauxH fauxH">Development</p>
-<div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>npm install &lt;new-module&gt; --save-dev</code></pre></div>
+<div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code class="bash" data-trim>npm install &lt;new-module&gt; --save-dev</code></pre></div>
 <p class="code-wrap--fauxH fauxH">Completed Feature</p>
-<div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>npm install &lt;new-module&gt; --save</code></pre></div>
-
-
+<div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code class="bash" data-trim>npm install &lt;new-module&gt; --save</code></pre></div>
 				</section>
 
 				<section data-transition="fade-in">
-    				<section>
+                    <section>
     					<h2><pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div></h2>
 <p class="code-wrap--fauxH fauxH">Init</p>
-<div class="code-wrap code-wrap--algnleft smaller"><pre class="inline-pre-code fs-0-48"><code data-trim>cd ~/projects &amp;&amp; mkdir &lt;pkg-name&gt; &amp;&amp; cd &lt;pkg-name&gt;/ &amp;&amp;
+<div class="code-wrap code-wrap--algnleft smaller"><pre class="inline-pre-code fs-0-48"><code class="bash" data-trim>cd ~/projects &amp;&amp; mkdir &lt;pkg-name&gt; &amp;&amp; cd &lt;pkg-name&gt;/ &amp;&amp;
 git init &amp;&amp; git push -u origin master &amp;&amp;
 git remote add origin https://github.com/username/PRE-repo.git &amp;&amp;
 npm init</code></pre></div>
 <p class="code-wrap--fauxH fauxH">Development</p>
-<div class="code-wrap code-wrap--algnleft smaller"><pre class="inline-pre-code fs-0-48"><code data-trim>npm install &lt;new-module&gt; --save-dev &amp;&amp;
+<div class="code-wrap code-wrap--algnleft smaller"><pre class="inline-pre-code fs-0-48"><code class="bash" data-trim>npm install &lt;new-module&gt; --save-dev &amp;&amp;
 git add package.json &amp;&amp;
 git commit -m "Changed package.json"</code></pre></div>
 <p class="code-wrap--fauxH fauxH">Completed Feature</p>
-<div class="code-wrap code-wrap--algnleft smaller"><pre class="inline-pre-code fs-0-48"><code data-trim>npm install &lt;new-module&gt; --save &amp;&amp;
+<div class="code-wrap code-wrap--algnleft smaller"><pre class="inline-pre-code fs-0-48"><code class="bash" data-trim>npm uninstall &lt;new-module&gt; --save-dev &amp;&amp;
+npm install &lt;new-module&gt; --save &amp;&amp;
 git commit -am "Progress Commit" &amp;&amp;
 git push</code></pre></div>
 <div class="short-link"><a href="https://git.io/vPUGc" target="_blank" class="short-git"><span class="short-host">git.io</span><span class="short-path">/vPUGc</span></a> | <a href="http://bit.ly/2dbcNhd" target="_blank" class="short-bit"><span class="short-host">bit.ly</span><span class="short-path">/2dbcNhd</span></a></div>
-    				</section>
-        				<section>
+                    </section>
+                    <section>
         					<h2>Init <pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div></h2>
 <p class="code-wrap--fauxH fauxH smaller">Setup Project Folder</p>
-<div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>cd ~/projects &amp;&amp; mkdir &lt;pkg-name&gt; &amp;&amp; cd &lt;pkg-name&gt;/</code></pre></div>
+<div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar"><pre class="inline-pre-code fs-0-48"><code class="bash" data-trim>cd ~/projects &amp;&amp; mkdir &lt;pkg-name&gt; &amp;&amp; cd &lt;pkg-name&gt;/</code></pre></div>
 <p class="code-wrap--fauxH fauxH smaller">Setup git</p>
-<div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>git init &amp;&amp; git push -u origin master</code></pre></div>
+<div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar"><pre class="inline-pre-code fs-0-48"><code class="bash" data-trim>git init &amp;&amp; git push -u origin master</code></pre></div>
 <p class="code-wrap--fauxH fauxH smaller">Set git to your repo</p>
-<div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>git remote add origin https://github.com/username/PRE-repo.git</code></pre></div>
+<div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar"><pre class="inline-pre-code fs-0-48"><code class="bash" data-trim>git remote add origin https://github.com/username/PRE-repo.git</code></pre></div>
 <p class="code-wrap--fauxH fauxH smaller">Create your node project file (Wizard)</p>
-<div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>npm init</code></pre></div>
-        				</section>
-        				<section>
+<div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar"><pre class="inline-pre-code fs-0-48"><code class="bash" data-trim>npm init</code></pre></div>
+                    </section>
+                    <section>
         					<h2>Development<pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div></h2>
 <p class="code-wrap--fauxH fauxH smaller">Development with new module</p>
-<div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>npm install &lt;new-module&gt; --save-dev</code></pre></div>
+<div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar"><pre class="inline-pre-code fs-0-48"><code class="bash" data-trim>npm install &lt;new-module&gt; --save-dev</code></pre></div>
 <p class="code-wrap--fauxH fauxH smaller">Capture new package.json</p>
-<div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>git add package.json</code></pre></div>
+<div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar"><pre class="inline-pre-code fs-0-48"><code class="bash" data-trim>git add package.json</code></pre></div>
 <p class="code-wrap--fauxH fauxH smaller">Setup</p>
-<div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>git commit -m "Changed package.json"</code></pre></div>
-        				</section>
-        				<section>
+<div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar"><pre class="inline-pre-code fs-0-48"><code class="bash" data-trim>git commit -m "Changed package.json"</code></pre></div>
+                    </section>
+                    <section>
         					<h2>Completed<pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div></h2>
-<p class="code-wrap--fauxH fauxH smaller">Move module out of 'dev only' and into 'production'</p>
-<div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>npm install &lt;new-module&gt; --save</code></pre></div>
+<p class="code-wrap--fauxH fauxH smaller">Delete module out of 'dev only'</p>
+<div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar"><pre class="inline-pre-code fs-0-48"><code class="bash" data-trim>npm uninstall &lt;new-module&gt; --save-dev</code></pre></div>
+<p class="code-wrap--fauxH fauxH smaller">Move module into 'production'</p>
+<div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar"><pre class="inline-pre-code fs-0-48"><code class="bash" data-trim>npm install &lt;new-module&gt; --save</code></pre></div>
 <p class="code-wrap--fauxH fauxH smaller">Add all files &amp; commit</p>
-<div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>git commit -am "Progress Commit"</code></pre></div>
+<div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar"><pre class="inline-pre-code fs-0-48"><code class="bash" data-trim>git commit -am "Progress Commit"</code></pre></div>
 <p class="code-wrap--fauxH fauxH smaller">Make it public</p>
-<div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>git push</code></pre></div>
-        				</section>
-        				<section>
+<div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar"><pre class="inline-pre-code fs-0-48"><code class="bash" data-trim>git push</code></pre></div>
+                    </section>
+                    <section>
         					<h2>Production<pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div></h2>
 <p class="code-wrap--fauxH fauxH smaller">Update code</p>
-<div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>git pull</code></pre></div>
+<div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar"><pre class="inline-pre-code fs-0-48"><code class="bash" data-trim>git pull</code></pre></div>
 <p class="code-wrap--fauxH fauxH smaller">Exclude dev modules</p>
-<div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code data-trim>npm install --production</code></pre></div>
-        				</section>
-
+<div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar"><pre class="inline-pre-code fs-0-48"><code class="bash" data-trim>npm install --production</code></pre></div>
+                    </section>
                 </section>
 
+
 				<section data-transition="fade-in">
-
-
 				    <section data-transition="fade-in">
 					<h2><pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json {scripts}</code></pre></h2>
-<div class=""><pre class="inline-pre-code fs-0-48"><code class="json" data-trim>{
+<div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar" style="width:auto;"><pre class="inline-pre-code fs-0-48"><code class="json" data-noescape>{
 "scripts":{
     "preinstall": "mkdir -p _cache/ &amp;&amp; chmod 777 _cache/",
     "install": "node install.js",
@@ -313,8 +309,24 @@ git push</code></pre></div>
     "test": "node test.js"
     }
 }</code></pre></div>
-<!-- &lt;xxxxxxx&gt; -->
+<div class="code-wrap code-wrap--algnleft" style="width:auto;"><pre class="inline-pre-code fs-0-48"><code class="bash" data-noescape>npm install</code></pre></div>
     				</section>
+
+
+				    <section data-transition="fade-in">
+					<h2><pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json {scripts}</code></pre></h2>
+<div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar" style="width:auto;"><pre class="inline-pre-code fs-0-48"><code class="json" data-noescape>{
+"scripts":{
+    "preinstall": "mkdir -p _cache/ &amp;&amp; chmod 777 _cache/",
+    <mark>"install": "node install.js"</mark>,
+    "start": "node index.js",
+    "uninstall": "node uninstall.js &amp;&amp; rm -rf _cache",
+    "test": "node test.js"
+    }
+}</code></pre></div>
+<div class="code-wrap code-wrap--algnleft" style="width:auto;"><pre class="inline-pre-code fs-0-48"><code class="bash" data-noescape>npm <mark>install</mark></code></pre></div>
+    				</section>
+
     				<section data-transition="fade-in">
 					<h2><pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json {scripts}</code></pre></h2>
 <div class="smaller"><pre class="inline-pre-code fs-0-48"><code class="json" data-trim>{
@@ -342,6 +354,8 @@ git push</code></pre></div>
 </code></pre></div>
 <!-- &lt;xxxxxxx&gt; -->
     				</section>
+
+
     				<section data-transition="fade-in">
 					<h2><pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json {scripts}</code></pre></h2>
 <div class="smaller"><pre class="inline-pre-code fs-0-48"><code class="json" data-noescape>{
@@ -374,42 +388,210 @@ git push</code></pre></div>
 <!-- &lt;xxxxxxx&gt; -->
     				</section>
 
+
+    				<section data-transition="fade-in">
+					<h2><pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json {scripts}</code></pre></h2>
+<div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar" style="width:auto;"><pre class="inline-pre-code fs-0-48"><code class="json" data-noescape>{
+"scripts":{
+    "daemon": "node index.js &gt; express-log.log &amp;",
+    "preinstall": "mkdir -p _cache/ &amp;&amp; chmod 777 _cache/",
+    "install": "node install.js",
+    "start": "node index.js",
+    "uninstall": "node uninstall.js &amp;&amp; rm -rf _cache",
+    "test": "node test.js"
+    }
+}</code></pre></div>
+<div class="code-wrap code-wrap--algnleft" style="width:auto;"><pre class="inline-pre-code fs-0-48"><code class="bash" data-noescape>npm daemon</code></pre></div>
+    				</section>
+
+    				<section data-transition="fade-in">
+					<h2><pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json {scripts}</code></pre></h2>
+<div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar" style="width:auto;"><pre class="inline-pre-code fs-0-48"><code class="json" data-noescape>{
+"scripts":{
+    <mark>"daemon": "node index.js &gt; express-log.log &amp;"</mark>,
+    "preinstall": "mkdir -p _cache/ &amp;&amp; chmod 777 _cache/",
+    "install": "node install.js",
+    "start": "node index.js",
+    "uninstall": "node uninstall.js &amp;&amp; rm -rf _cache",
+    "test": "node test.js"
+    }
+}</code></pre></div>
+<div class="code-wrap code-wrap--algnleft" style="width:auto;"><pre class="inline-pre-code fs-0-48"><code class="bash" data-noescape>npm <mark>daemon</mark></code></pre></div>
+    				</section>
+                    <section data-transition="fade-in">
+                <h2><pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json {scripts}</code></pre></h2>
+                <p class="code-wrap--fauxH fauxH smaller">Breakdown</p>
+<div class="code-wrap code-wrap--algnleft" style="width:auto;"><pre class="inline-pre-code fs-0-48"><code class="bash" data-noescape>node index.js &gt; express-log.log &amp;</code></pre></div>
+<p class="code-wrap--fauxH fauxH smaller" style="opacity:0;">holder</p>
+                    </section>
+                    <section data-transition="fade-in">
+            <h2><pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json {scripts}</code></pre></h2>
+            <p class="code-wrap--fauxH fauxH smaller">Breakdown</p>
+<div class="code-wrap code-wrap--algnleft" style="width:auto;"><pre class="inline-pre-code fs-0-48"><code class="bash" data-noescape><mark>node</mark> index.js &gt; express-log.log &amp;</code></pre></div>
+<p class="code-wrap--fauxH fauxH smaller">execute binary (node)</p>
+                    </section>
+                    <section data-transition="fade-in">
+            <h2><pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json {scripts}</code></pre></h2>
+            <p class="code-wrap--fauxH fauxH smaller">Breakdown</p>
+<div class="code-wrap code-wrap--algnleft" style="width:auto;"><pre class="inline-pre-code fs-0-48"><code class="bash" data-noescape>node <mark>index.js</mark> &gt; express-log.log &amp;</code></pre></div>
+<p class="code-wrap--fauxH fauxH smaller">with argument (node on file)</p>
+                    </section>
+
+                    <section data-transition="fade-in">
+            <h2><pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json {scripts}</code></pre></h2>
+            <p class="code-wrap--fauxH fauxH smaller">Breakdown</p>
+<div class="code-wrap code-wrap--algnleft" style="width:auto;"><pre class="inline-pre-code fs-0-48"><code class="bash" data-noescape>node index.js <mark>&gt;</mark> express-log.log &amp;</code></pre></div>
+<p class="code-wrap--fauxH fauxH smaller">capture outputs (console.logs) ...</p>
+                    </section>
+                    <section data-transition="fade-in">
+            <h2><pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json {scripts}</code></pre></h2>
+            <p class="code-wrap--fauxH fauxH smaller">Breakdown</p>
+<div class="code-wrap code-wrap--algnleft" style="width:auto;"><pre class="inline-pre-code fs-0-48"><code class="bash" data-noescape>node index.js <mark>&gt;</mark> express-log.log &amp;</code></pre></div>
+<p class="code-wrap--fauxH fauxH smaller">deleting the exisiting version in the process (use &gt;&gt; non desctructive) ...</p>
+                    </section>
+                    <section data-transition="fade-in">
+            <h2><pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json {scripts}</code></pre></h2>
+            <p class="code-wrap--fauxH fauxH smaller">Breakdown</p>
+<div class="code-wrap code-wrap--algnleft" style="width:auto;"><pre class="inline-pre-code fs-0-48"><code class="bash" data-noescape>node index.js &gt; <mark>express-log.log</mark> &amp;</code></pre></div>
+<p class="code-wrap--fauxH fauxH smaller">into speicified filename</p>
+                    </section>
+                    <section data-transition="fade-in">
+            <h2><pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json {scripts}</code></pre></h2>
+            <p class="code-wrap--fauxH fauxH smaller">Breakdown</p>
+<div class="code-wrap code-wrap--algnleft" style="width:auto;"><pre class="inline-pre-code fs-0-48"><code class="bash" data-noescape>node index.js &gt; express-log.log <mark>&amp;</mark></code></pre></div>
+<p class="code-wrap--fauxH fauxH smaller">run as a background task (we made a daemon)</p>
+                    </section>
                 </section>
+
+
+
                 <section>
-<section data-transition="fade-in">
-<h2 style="text-transform:none"><span class="telus-text telus-green">#tags</span> ( <pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div> ) </h2>
+                    <section data-transition="fade-in">
+                    <h2 style="text-transform:none"><span class="telus-text telus-green">#tags</span> ( <pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div> ) </h2>
 <div class="code-wrap code-wrap--algnleft"><pre class="inline-pre-code fs-0-48"><code class="json" data-trim>{
   "dependencies": {
-    "modulename":"https://github.com/username/PRE-repo.git#v0.0.4"
+    "modulename":"https://github.com/username/PRE-repo.git#v0.0.1"
   }
-}
-</code></pre></div>
-</section>
-<section data-transition="fade-in">
-<h2 style="text-transform:none"><span class="telus-text telus-green">#tags</span> ( <pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div> ) </h2>
-<p class="code-wrap--fauxH fauxH smaller">Your Module</p>
+}</code></pre></div>
+                    </section>
+                    <section data-transition="fade-in">
+                    <h2 style="text-transform:none"><span class="telus-text telus-green">#tags</span> ( <pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div> ) </h2>
+                    <p class="code-wrap--fauxH fauxH smaller">Your Module</p>
 <div class="code-wrap code-wrap--algnleft"><pre class="inline-pre-code fs-0-48"><code class="json" data-trim>{
   "name": "node-default-server",
   "version": "0.0.1"
 }</code></pre></div>
-</section>
-<section data-transition="fade-in">
-<h2 style="text-transform:none"><span class="telus-text telus-green">#tags</span> ( <pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div> ) </h2>
-<p class="code-wrap--fauxH fauxH smaller">My Application</p>
-<div class="code-wrap code-wrap--algnleft" style="font-size:75%;"><pre class="inline-pre-code fs-0-48"><code class="json" data-trim>{
+                    </section>
+                    <section data-transition="fade-in">
+                    <h2 style="text-transform:none"><span class="telus-text telus-green">#tags</span> ( <pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div> ) </h2>
+                    <p class="code-wrap--fauxH fauxH smaller">My Application</p>
+<div class="code-wrap code-wrap--algnleft" style="font-size:85%;"><pre class="inline-pre-code fs-0-48"><code class="json" data-noescape>{
   "dependencies": {
-    "node-default-server":"https://github.com/bigorangemachine/BOM-default-server.git#v0.0.1"
+    "mysql": "^2.10.0",
+    "url": "^0.10.3",<mark>
+    "node-default-server":"https://github.com/bigorangemachine/BOM-default-server.git#v0.0.1",</mark>
+    "merge": "^1.2.0",
+    "underscore": "^1.8.3"
   }
-}
-</code></pre></div>
-</section>
-                <section data-transition="fade-in">
-<h2 style="text-transform:none"><span class="telus-text telus-green">#tags</span> ( <pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div> ) </h2>
-<p class="code-wrap--fauxH fauxH smaller">Reset Applications modules</p>
-<div class="code-wrap code-wrap--algnleft"><pre class="inline-pre-code fs-0-48"><code class="json" data-trim>sudo rm -rf node_modules/ &amp;&amp; sudo rm -rf ~/.npm/ &amp;&amp; npm cache clear &amp;&amp; npm update</code></pre></div>
-<img src="img/nuke.gif"/>
+}</code></pre></div>
+                    </section>
+                    <section data-transition="fade-in">
+                    <h2 style="text-transform:none"><span class="telus-text telus-green">#tags</span> ( <pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div> ) </h2>
+                    <p class="code-wrap--fauxH fauxH smaller">Inside My Application's index.js</p>
+<div class="code-wrap code-wrap--algnleft"><pre class="inline-pre-code fs-0-48"><code class="javascript" data-trim>var defaultServer = require('node-default-server');
+// ...
+var my_server = new defaultServer({
+        'doc_root':mydocroot,
+        'ports':[80, 443, 3000, 9000],
+         ... // more configuration
+    }
+);</code></pre></div>
+                    </section>
                 </section>
+                <section>
+                    <section data-transition="fade-in">
+                    <h2 style="text-transform:none"><span class="telus-text telus-green">#tags</span> ( <pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div> ) <span class="telus-purple">.workflow</span></h2>
+                    <p class="code-wrap--fauxH fauxH smaller">Before pushing your module feature (package.json)</p>
+<div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar" style="font-size:75%;"><pre class="inline-pre-code fs-0-48"><code class="json" data-noescape>{
+  "name": "node-default-server",
+  "version": "<mark>0.0.1</mark>"
+}</code></pre></div>
+                    <p class="code-wrap--fauxH fauxH smaller">After pushing your feature</p>
+<div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar" style="font-size:75%;"><pre class="inline-pre-code fs-0-48"><code class="bash" data-trim>git tag -a v0.0.1 -m "Publishing Version v0.0.1" &amp;&amp; git push origin --tags</code></pre></div>
+                    <p class="code-wrap--fauxH fauxH smaller">Your Application Module Update (package.json)</p>
+<div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar" style="font-size:75%;"><pre class="inline-pre-code fs-0-48"><code class="json" data-noescape>{
+  "dependencies": {
+    "node-default-server":"https://github.com/bigorangemachine/BOM-default-server.git#<mark>v0.0.1</mark>"
+  }
+}</code></pre></div>
+                    <p class="code-wrap--fauxH fauxH smaller">NPM Update</p>
+<div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar" style="font-size:75%;"><pre class="inline-pre-code fs-0-48"><code class="bash" data-noescape>npm cache clear &amp;&amp; npm update</code></pre></div>
+                    </section>
+
+                    <section data-transition="fade-in">
+                    <h2 style="text-transform:none"><span class="telus-text telus-green">#tags</span> ( <pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div> ) <span class="telus-purple">.workflow</span></h2>
+                    <p class="code-wrap--fauxH fauxH smaller">Before pushing your feature (package.json)</p>
+<div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar"><pre class="inline-pre-code fs-0-48"><code class="json" data-noescape>{
+  "name": "node-default-server",
+  "version": "<mark>0.0.1</mark>"
+}</code></pre></div>
+                    <p class="code-wrap--fauxH fauxH smaller">Push your feature</p>
+<div class="code-wrap code-wrap--algnleft"><pre class="inline-pre-code fs-0-48"><code class="bash" data-noescape>git add package.json &amp;&amp;
+git add [ filelist or --all ] &amp;&amp;
+git commit -m "Completed feature." &amp;&amp;
+git commit --amend -m "Incremented patch version" &amp;&amp;
+git commit --amend -m "reflected in package.json to 0.0.1" &amp;&amp;
+git push</code></pre></div>
+                    </section>
+
+
+
+                    <section data-transition="fade-in">
+                    <h2 style="text-transform:none"><span class="telus-text telus-green">#tags</span> ( <pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div> ) <span class="telus-purple">.workflow</span></h2>
+                    <p class="code-wrap--fauxH fauxH smaller">After pushing - git tag your repo</p>
+<div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar"><pre class="inline-pre-code fs-0-48"><code class="bash" data-noescape>git tag -a v0.0.1 -m "Publishing Version v0.0.1" &amp;&amp; git push origin --tags</code></pre></div>
+                    <div class="fragment">
+                        <p class="code-wrap--fauxH fauxH smaller">Actually... test your releases</p>
+<div class="code-wrap code-wrap--algnleft"><pre class="inline-pre-code fs-0-48"><code class="bash" data-noescape>npm test</code></pre></div>
+<div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar"><pre class="inline-pre-code fs-0-48"><code class="bash" data-noescape>git add --all &amp;&amp; git commit -m "Whoops" &amp;&amp; git push</code></pre></div>
+
+<p class="code-wrap--fauxH fauxH smaller">Delete and republish your tag</p>
+<div class="code-wrap code-wrap--algnleft"><pre class="inline-pre-code fs-0-48"><code class="bash" data-noescape>git tag -d v0.0.1 &amp;&amp;
+git push origin --tags &amp;&amp;
+git push origin :refs/tags/v0.0.1 &amp;&amp;
+git tag -a v0.0.1 -m "RePublishing Version v0.0.1" &amp;&amp;
+git push origin --tags</code></pre></div>
+                    </div>
+                    </section>
+
+
+                    <section data-transition="fade-in">
+                    <h2 style="text-transform:none"><span class="telus-text telus-green">#tags</span> ( <pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div> ) <span class="telus-purple">.workflow</span></h2>
+                    <p class="code-wrap--fauxH fauxH smaller">Your Application Module Update (package.json)</p>
+<div class="code-wrap code-wrap--algnleft" style="font-size:85%;"><pre class="inline-pre-code fs-0-48"><code class="json" data-noescape>{
+  "dependencies": {
+    "node-default-server":"https://github.com/bigorangemachine/BOM-default-server.git#<mark>v0.0.1</mark>"
+  }
+}</code></pre></div>
+<div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar" style="font-size:95%;"><pre class="inline-pre-code fs-0-48"><code class="bash" data-noescape>npm cache clear &amp;&amp;
+npm update</code></pre></div>
+                    <p class="code-wrap--fauxH fauxH smaller">OR</p>
+<div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar" style="font-size:95%;"><pre class="inline-pre-code fs-0-48"><code class="bash" data-noescape>npm install https://github.com/bigorangemachine/BOM-default-server.git#v0.0.1 --save &amp;&amp;
+npm cache clear &amp;&amp;
+npm update</code></pre></div>
+                    </section>
+
+                    <section data-transition="fade-in">
+                    <h2 style="text-transform:none"><span class="telus-text telus-green">#tags</span> ( <pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div> ) <span class="telus-purple">.workflow</span></h2>
+                        <p class="code-wrap--fauxH fauxH smaller">Nuke the modules</p>
+<div class="code-wrap code-wrap--algnleft"><pre class="inline-pre-code fs-0-48"><code class="bash" data-trim>sudo rm -rf node_modules/ &amp;&amp; sudo rm -rf ~/.npm/ &amp;&amp; npm cache clear &amp;&amp; npm update</code></pre></div>
+                        <img src="img/nuke.gif" class="borderless-img"/>
+                    </section>
                 </section>
+
+
+
+
                 <section data-transition="fade-in" id="test-driven-dev">
                     <h2>Test Driven Development (TDD)</h2>
 
