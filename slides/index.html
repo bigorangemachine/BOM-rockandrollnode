@@ -163,6 +163,7 @@
 			.reveal .fs-0-78{font-size:78%;}
             .force-normal-case{text-transform:none;}
             .reveal .fauxH{font-weight:bold;padding-bottom:0px;margin:0px;}
+            .reveal .crossTxt{text-decoration: line-through;}
             .code-wrap--fauxH{text-align:left;padding-left:38px !important;}
 
             .code-wrap{margin-top:0px;padding-top:0px;width:100%;text-align:center;}
@@ -202,8 +203,9 @@
 					<div style="text-align:left;width:53%;margin-left:auto;margin-right:auto;float:left;">
 						<p>Topics</p>
 						<ul class="fs-0-78">
-							<li><a href="#/packagejson">Package.json + Workflow</a></li>
-							<li><a href="#/custom-npm">Custom NPM modules</a></li>
+							<li><a href="#/packagejson">Package.json</a></li>
+							<li><a href="#/customnpm">Custom NPM modules</a></li>
+							<li><a href="#/workflow">Workflow</a></li>
 							<li><a href="#/node-all-the-things">Node all the things</a></li>
                             <li><a href="#/test-driven-dev">Test Driven Development</a></li>
 							<li><a href="#/scoping">Scoping things out</a></li>
@@ -237,7 +239,7 @@
 <div class="code-wrap"><pre class="inline-pre-code fs-0-48"><code class="bash" data-trim>npm install &lt;new-module&gt; --save</code></pre></div>
 				</section>
 
-				<section data-transition="fade-in">
+				<section id="customnpm" data-transition="fade-in">
                     <section>
     					<h2><pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div></h2>
 <p class="code-wrap--fauxH fauxH">Init</p>
@@ -473,6 +475,7 @@ git push</code></pre></div>
     "modulename":"https://github.com/username/PRE-repo.git#v0.0.1"
   }
 }</code></pre></div>
+                    <div class="short-link"><a href="https://git.io/vPqx9" target="_blank" class="short-git"><span class="short-host">git.io</span><span class="short-path">/vPqx9</span></a> | <a href="http://bit.ly/2cLrIuQ" target="_blank" class="short-bit"><span class="short-host">bit.ly</span><span class="short-path">/2cLrIuQ</span></a></div>
                     </section>
                     <section data-transition="fade-in">
                     <h2 style="text-transform:none"><span class="telus-text telus-green">#tags</span> ( <pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div> ) </h2>
@@ -497,18 +500,19 @@ git push</code></pre></div>
                     </section>
                     <section data-transition="fade-in">
                     <h2 style="text-transform:none"><span class="telus-text telus-green">#tags</span> ( <pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div> ) </h2>
-                    <p class="code-wrap--fauxH fauxH smaller">Inside My Application's index.js</p>
+                    <p class="code-wrap--fauxH fauxH smaller">Inside My Application's index.js (eventually)</p>
 <div class="code-wrap code-wrap--algnleft"><pre class="inline-pre-code fs-0-48"><code class="javascript" data-trim>var defaultServer = require('node-default-server');
 // ...
+/*
 var my_server = new defaultServer({
         'doc_root':mydocroot,
         'ports':[80, 443, 3000, 9000],
          ... // more configuration
     }
-);</code></pre></div>
+);*/</code></pre></div>
                     </section>
                 </section>
-                <section>
+                <section id="workflow">
                     <section data-transition="fade-in">
                     <h2 style="text-transform:none"><span class="telus-text telus-green">#tags</span> ( <pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div> ) <span class="telus-purple">.workflow</span></h2>
                     <p class="code-wrap--fauxH fauxH smaller">Before pushing your module feature (package.json)</p>
@@ -589,9 +593,6 @@ npm update</code></pre></div>
                     </section>
                 </section>
 
-
-
-
                 <section data-transition="fade-in" id="test-driven-dev">
                     <h2>Test Driven Development (TDD)</h2>
 
@@ -599,6 +600,82 @@ npm update</code></pre></div>
                         <img src="img/relax.gif" class="plain-img" style="width:100%;" />
                     </div>
 
+                </section>
+
+                <section>
+                    <section data-transition="fade-in">
+                        <h2 class="smaller"><span class="crossTxt">(TDD)</span> Feature Focused Workflow (FDW)</h2>
+                        <div style="position:relative;width:100%;margin:0px auto;overflow:hidden;">
+                            <img src="img/tdd-project-flow.jpg" class="plain-img" style="width:100%;" />
+                        </div>
+                        <div class="short-link"><a href="https://git.io/vPUGc" target="_blank" class="short-git"><span class="short-host">git.io</span><span class="short-path">/vPUGc</span></a> | <a href="http://bit.ly/2dbcNhd" target="_blank" class="short-bit"><span class="short-host">bit.ly</span><span class="short-path">/2dbcNhd</span></a></div>
+                    </section>
+
+                    <section data-transition="fade-in">
+                        <h2 class="smaller">Feature Focused Workflow (FDW)</h2>
+                        <div style="position:relative;width:100%;margin:0px auto;overflow:hidden;">
+                            <div style="width: 46%;height: 49%;border:3px solid #ff0000;z-index:5;position:absolute;left: 18%;top: 26%;"></div>
+                            <img src="img/tdd-project-flow.jpg" class="plain-img" style="width:180%;z-index:3;position:absolute;left:-25%;top:0px;" />
+                            <img src="img/tdd-project-flow.jpg" class="plain-img" style="width:180%;opacity:0;" />
+                        </div>
+                    </section>
+
+                    <section data-transition="fade-in">
+                        <h2 class="smaller">Feature Focused Workflow (FDW)</h2>
+                        <div style="position:relative;width:100%;margin:0px auto;overflow:hidden;">
+                            <div style="width: 41%;height: 44%;border:3px solid #ff0000;z-index:5;position:absolute;left: 3%;top: 12%;"></div>
+                            <img src="img/tdd-project-flow.jpg" class="plain-img" style="width:180%;z-index:3;position:absolute;left: -63%;top: -17%;" />
+                            <img src="img/tdd-project-flow.jpg" class="plain-img" style="width:180%;opacity:0;" />
+                        </div>
+                    </section>
+
+                    <section data-transition="fade-in">
+                        <h2 class="smaller">Feature Focused Workflow (FDW)</h2>
+                        <div style="position:relative;width:100%;margin:0px auto;overflow:hidden;">
+                            <div style="width: 43%;height: 45%;border:3px solid #ff0000;z-index:5;position:absolute;left: 4%;top: 33%;">
+                                <div style="background-color:#222;width:41%;height:15%;float:right;margin-right:5%;"></div>
+                            </div>
+                            <img src="img/tdd-project-flow.jpg" class="plain-img" style="width:180%;z-index:3;position:absolute;left: -63%;top: -17%;" />
+                            <img src="img/tdd-project-flow.jpg" class="plain-img" style="width:180%;opacity:0;" />
+                        </div>
+                    </section>
+
+                    <section data-transition="fade-in">
+                        <h2 class="smaller">Feature Focused Workflow (FDW)</h2>
+                        <div style="position:relative;width:100%;margin:0px auto;overflow:hidden;">
+                            <div style="width: 43%;height: 50%;border:3px solid #ff0000;z-index:5;position:absolute;left: 22%;top: 26%;"></div>
+                            <img src="img/tdd-project-flow.jpg" class="plain-img" style="width:180%;z-index:3;position:absolute;left: -68%;top: -1%;" />
+                            <img src="img/tdd-project-flow.jpg" class="plain-img" style="width:180%;opacity:0;" />
+                        </div>
+                    </section>
+
+                    <section data-transition="fade-in">
+                        <h2 class="smaller">Feature Focused Workflow (FDW)</h2>
+                        <div style="position:relative;width:100%;margin:0px auto;overflow:hidden;">
+                            <div style="width: 52%;height: 55%;border:3px solid #ff0000;z-index:5;position:absolute;left: 22%;top: 0%;"></div>
+                            <img src="img/tdd-project-flow.jpg" class="plain-img" style="width:180%;z-index:3;position:absolute;left: -68%;top: -1%;" />
+                            <img src="img/tdd-project-flow.jpg" class="plain-img" style="width:180%;opacity:0;" />
+                        </div>
+                    </section>
+
+                    <section data-transition="fade-in">
+                        <h2 class="smaller">Feature Focused Workflow (FDW)</h2>
+                        <div style="position:relative;width:100%;margin:0px auto;overflow:hidden;">
+                            <div style="width: 71%;height: 31%;border:3px solid #ff0000;z-index:5;position:absolute;left: 15%;top: 0%;"></div>
+                            <img src="img/tdd-project-flow.jpg" class="plain-img" style="width:180%;z-index:3;position:absolute;left:-86%;top: -1%;" />
+                            <img src="img/tdd-project-flow.jpg" class="plain-img" style="width:180%;opacity:0;" />
+                        </div>
+                    </section>
+
+                    <section data-transition="fade-in">
+                        <h2 class="smaller">Feature Focused Workflow (FDW)</h2>
+                        <div style="position:relative;width:100%;margin:0px auto;overflow:hidden;">
+                            <div style="width: 20%;height: 31%;border:3px solid #ff0000;z-index:5;position:absolute;left: 68%;top: 0%;"></div>
+                            <div style="width: 20%;height: 31%;border:3px solid #ff0000;z-index:5;position:absolute;left: 25%;top: 47%;"></div>
+                            <img src="img/tdd-project-flow.jpg" class="plain-img" style="width:180%;z-index:3;position:absolute;left:-86%;top: -1%;" />
+                            <img src="img/tdd-project-flow.jpg" class="plain-img" style="width:180%;opacity:0;" />
+                        </div>
+                    </section>
                 </section>
 
                 <section data-transition="fade-in" id="node-all-the-things">
