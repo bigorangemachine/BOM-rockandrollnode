@@ -208,6 +208,7 @@
 							<li><a href="#/workflow">Workflow</a></li>
 							<li><a href="#/node-all-the-things">Node all the things</a></li>
                             <li><a href="#/test-driven-dev">Test Driven Development</a></li>
+                            <li><a href="#/vanillatest">Vanilla Test</a></li>
 							<li><a href="#/scoping">Scoping things out</a></li>
 							<li><a href="#/functional">Keep it functional</a></li>
 							<li><a href="#/promises">Promise me you'll Use promises</a></li>
@@ -580,7 +581,7 @@ git push origin --tags</code></pre></div>
 <div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar" style="font-size:95%;"><pre class="inline-pre-code fs-0-48"><code class="bash" data-noescape>npm cache clear &amp;&amp;
 npm update</code></pre></div>
                     <p class="code-wrap--fauxH fauxH smaller">OR</p>
-<div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar" style="font-size:95%;"><pre class="inline-pre-code fs-0-48"><code class="bash" data-noescape>npm install https://github.com/bigorangemachine/BOM-default-server.git#v0.0.1 --save &amp;&amp;
+<div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar" style="font-size:95%;"><pre class="inline-pre-code fs-0-48"><code class="bash" data-noescape>npm install https://github.com/bigorangemachine/BOM-default-server.git#<mark>v0.0.1</mark> --save &amp;&amp;
 npm cache clear &amp;&amp;
 npm update</code></pre></div>
                     </section>
@@ -595,16 +596,21 @@ npm update</code></pre></div>
 
                 <section data-transition="fade-in" id="test-driven-dev">
                     <h2>Test Driven Development (TDD)</h2>
-
                     <div style="position:relative;width:80%;margin:0px auto;">
                         <img src="img/relax.gif" class="plain-img" style="width:100%;" />
                     </div>
+                </section>
 
+                <section data-transition="fade-in" style="height:90vh;">
+                    <h2>Get Small</h2>
+                    <div style="position:relative;height:80vh;margin-top:-1.6em;">
+                        <div style="z-index:3;width: 3px;height: 3px;border:1px solid #d2d2d2;background-color:#d2d2d2;border-radius:100%;position:absolute;left: 66%;top: 70%;transform: scale(0.5,0.5);"></div>
+                    </div>
                 </section>
 
                 <section>
                     <section data-transition="fade-in">
-                        <h2 class="smaller"><span class="crossTxt">(TDD)</span> Feature Focused Workflow (FDW)</h2>
+                        <h2 class="smaller"><span class="crossTxt">(TDD)</span> Feature Focused Workflow (FFW)</h2>
                         <div style="position:relative;width:100%;margin:0px auto;overflow:hidden;">
                             <img src="img/tdd-project-flow.jpg" class="plain-img" style="width:100%;" />
                         </div>
@@ -612,7 +618,7 @@ npm update</code></pre></div>
                     </section>
 
                     <section data-transition="fade-in">
-                        <h2 class="smaller">Feature Focused Workflow (FDW)</h2>
+                        <h2 class="smaller">Feature Focused Workflow (FFW)</h2>
                         <div style="position:relative;width:100%;margin:0px auto;overflow:hidden;">
                             <div style="width: 46%;height: 49%;border:3px solid #ff0000;z-index:5;position:absolute;left: 18%;top: 26%;"></div>
                             <img src="img/tdd-project-flow.jpg" class="plain-img" style="width:180%;z-index:3;position:absolute;left:-25%;top:0px;" />
@@ -621,7 +627,7 @@ npm update</code></pre></div>
                     </section>
 
                     <section data-transition="fade-in">
-                        <h2 class="smaller">Feature Focused Workflow (FDW)</h2>
+                        <h2 class="smaller">Feature Focused Workflow (FFW)</h2>
                         <div style="position:relative;width:100%;margin:0px auto;overflow:hidden;">
                             <div style="width: 41%;height: 44%;border:3px solid #ff0000;z-index:5;position:absolute;left: 3%;top: 12%;"></div>
                             <img src="img/tdd-project-flow.jpg" class="plain-img" style="width:180%;z-index:3;position:absolute;left: -63%;top: -17%;" />
@@ -630,7 +636,7 @@ npm update</code></pre></div>
                     </section>
 
                     <section data-transition="fade-in">
-                        <h2 class="smaller">Feature Focused Workflow (FDW)</h2>
+                        <h2 class="smaller">Feature Focused Workflow (FFW)</h2>
                         <div style="position:relative;width:100%;margin:0px auto;overflow:hidden;">
                             <div style="width: 43%;height: 45%;border:3px solid #ff0000;z-index:5;position:absolute;left: 4%;top: 33%;">
                                 <div style="background-color:#222;width:41%;height:15%;float:right;margin-right:5%;"></div>
@@ -641,25 +647,24 @@ npm update</code></pre></div>
                     </section>
 
                     <section data-transition="fade-in">
-                        <h2 class="smaller">Feature Focused Workflow (FDW)</h2>
+                        <h2 class="smaller">Feature Focused Workflow (FFW)</h2>
                         <div style="position:relative;width:100%;margin:0px auto;overflow:hidden;">
-                            <div style="width: 43%;height: 50%;border:3px solid #ff0000;z-index:5;position:absolute;left: 22%;top: 26%;"></div>
-                            <img src="img/tdd-project-flow.jpg" class="plain-img" style="width:180%;z-index:3;position:absolute;left: -68%;top: -1%;" />
+                            <img src="img/tdd-project-flow-cycle.jpg" class="plain-img" style="width:180%;z-index:3;position:absolute;left: -50%;top: -14%;" />
+                            <img src="img/tdd-project-flow-cycle.jpg" class="plain-img" style="width:180%;opacity:0;" />
+                        </div>
+                    </section>
+
+                    <section data-transition="fade-in">
+                        <h2 class="smaller">Feature Focused Workflow (FFW)</h2>
+                        <div style="position:relative;width:100%;margin:0px auto;overflow:hidden;">
+                            <div style="width: 52%;height: 55%;border:3px solid #ff0000;z-index:5;position:absolute;left: 22%;top: 16%;"></div>
+                            <img src="img/tdd-project-flow.jpg" class="plain-img" style="width:180%;z-index:3;position:absolute;left: -68%;top: 15%;" />
                             <img src="img/tdd-project-flow.jpg" class="plain-img" style="width:180%;opacity:0;" />
                         </div>
                     </section>
 
                     <section data-transition="fade-in">
-                        <h2 class="smaller">Feature Focused Workflow (FDW)</h2>
-                        <div style="position:relative;width:100%;margin:0px auto;overflow:hidden;">
-                            <div style="width: 52%;height: 55%;border:3px solid #ff0000;z-index:5;position:absolute;left: 22%;top: 0%;"></div>
-                            <img src="img/tdd-project-flow.jpg" class="plain-img" style="width:180%;z-index:3;position:absolute;left: -68%;top: -1%;" />
-                            <img src="img/tdd-project-flow.jpg" class="plain-img" style="width:180%;opacity:0;" />
-                        </div>
-                    </section>
-
-                    <section data-transition="fade-in">
-                        <h2 class="smaller">Feature Focused Workflow (FDW)</h2>
+                        <h2 class="smaller">Feature Focused Workflow (FFW)</h2>
                         <div style="position:relative;width:100%;margin:0px auto;overflow:hidden;">
                             <div style="width: 71%;height: 31%;border:3px solid #ff0000;z-index:5;position:absolute;left: 15%;top: 0%;"></div>
                             <img src="img/tdd-project-flow.jpg" class="plain-img" style="width:180%;z-index:3;position:absolute;left:-86%;top: -1%;" />
@@ -668,7 +673,7 @@ npm update</code></pre></div>
                     </section>
 
                     <section data-transition="fade-in">
-                        <h2 class="smaller">Feature Focused Workflow (FDW)</h2>
+                        <h2 class="smaller">Feature Focused Workflow (FFW)</h2>
                         <div style="position:relative;width:100%;margin:0px auto;overflow:hidden;">
                             <div style="width: 20%;height: 31%;border:3px solid #ff0000;z-index:5;position:absolute;left: 68%;top: 0%;"></div>
                             <div style="width: 20%;height: 31%;border:3px solid #ff0000;z-index:5;position:absolute;left: 25%;top: 47%;"></div>
@@ -676,6 +681,102 @@ npm update</code></pre></div>
                             <img src="img/tdd-project-flow.jpg" class="plain-img" style="width:180%;opacity:0;" />
                         </div>
                     </section>
+                </section>
+
+                <section data-transition="fade-in" id="vanillatest">
+                    <h2>Vanilla Test</h2>
+
+                    <div style="position:relative;width:80%;margin:0px auto;">
+
+//modules
+var _ = require('underscore');// http://underscorejs.org/
+var do_terminate=function(reportTrace){
+        console.log("\n\n\n================= do_terminate PID: "+process.pid+" =================","\n");
+
+        process.on('exit', function(code){
+            console.log('===PROCESS process.on(\'exit\') EVENT===');
+            console.log("\n================= \\\\do_terminate PID: "+process.pid+" =================","\n\n");
+        });
+        process.exit();//nothing happens after this - except the event hadler
+    },
+    do_init=function(){//initalize
+        //custom modules
+        var do_console_err=true,
+            do_err=function(input){
+                if(do_console_err){
+                    console.error(input.toString());}
+                else{
+                    throw (input instanceof Error?input?new Error(input.toString());}
+            };
+
+        var do_sets=[
+            function(doNext){
+                try{
+                    testc0re=new c0re(function(){
+                        console.log("[C0RE TEST] TEST CORE SUCCESS CALLBACK");
+                    });
+                }catch(e){do_err("[C0RE TEST] Could not build 'NO ARG'\n"+e.toString());}
+                doNext();
+            },
+            function(doNext){
+                try{
+                    testc0re.enqueue(function(pkg,pos,neg){
+                        var delaytime=2;
+                        //console.log("============== WAITING "+delaytime+" SECONDS ==============");
+                        setTimeout(function(){
+                            //console.log("============== "+delaytime+" SECONDS AFTER ==============");
+                            try{pos();}
+                            catch(eInner){do_err("[C0RE TEST] Could not enqueue 'POS FUNC' single arg\n"+eInner.toString());}
+                            doNext();
+                        },delaytime * 1000);
+                    });
+                }catch(e){
+                    do_err("[C0RE TEST] Could not build 'SINGLE ARG'\n"+e.toString());
+                    doNext();
+                }
+                testc0re.execute();
+            },
+            function(doNext){
+                try{
+                    testc0re.enqueue(function(pkg,pos,neg){
+                        try{pos();}
+                        catch(eInner){do_err("[C0RE TEST] Could not enqueue 'POS FUNC' TWO arg\n"+eInner.toString());}
+                    },
+                    function(){doNext();});
+                }catch(e){
+                    do_err("[C0RE TEST] Could not build 'TWO ARG'\n"+e.toString());
+                    doNext();
+                }
+            },
+            function(doNext){
+                var did_fail=false;
+                try{
+                    testc0re.enqueue(function(pkg,pos,neg){
+                        //this is actually just an example; nothing to do here!
+                    },[]);//[] testing failure!
+                }catch(e){
+                    did_fail=true;
+                }
+                if(did_fail===false){do_err("[C0RE TEST] Building 'TWO ARG' succeed when it should have failed.\n"+e.toString());}
+                doNext();
+            }
+        ];
+        var binded_dos=[];
+        for(var d=0;d<do_sets.length;d++){
+            binded_dos.push((function(index){
+                return function(){
+                    do_sets[index]((binded_dos.length-1>index && typeof(binded_dos[index+1])==='function'?binded_dos[index+1]:do_terminate));//do_terminate(false);
+                };
+            })(d));
+        }
+        binded_dos[0]();
+	};
+
+do_init();
+
+
+                    </div>
+
                 </section>
 
                 <section data-transition="fade-in" id="node-all-the-things">
