@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>TELUS.h@ck(day,'node');</title>
+		<title>BOM.h@ck(day,'node');</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -103,12 +103,12 @@
 				font-weight: normal;
 				font-style: normal;
 			}
-			.telus-text{font-family:"tlightregular", "Helvetica Neue", Helvetica, Arial, sans-serif !important;font-weight:normal !important;}
-            .telus-green{color:#66cc00;}
+			.BOM-text{font-family:"tlightregular", "Helvetica Neue", Helvetica, Arial, sans-serif !important;font-weight:normal !important;}
+            .BOM-green{color:#66cc00;}
             .m-grey{color:#999;}
-			.telus-pink{color:#f52772;}
-			.telus-purple > *,
-			.telus-purple{color:#8c68a6;}
+			.BOM-pink{color:#f52772;}
+			.BOM-purple > *,
+			.BOM-purple{color:#8c68a6;}
 			.reveal .frag-wrap pre.code-seg{box-shadow:none;margin-top:0px;margin-bottom:0px;}
 			.reveal .frag-wrap pre.code-seg:first-child{margin-top:20px;}
 			.reveal .frag-wrap pre.code-code:last-child{margin-bottom:20px;}
@@ -167,11 +167,12 @@
             .code-wrap--fauxH{text-align:left;padding-left:38px !important;}
 
             .code-wrap{margin-top:0px;padding-top:0px;width:100%;text-align:center;}
-            .code-wrap pre code{width:100%;}
-            .code-wrap .inline-pre-code{width:95%;}
+            .code-wrap pre code,.code-wrap .inline-pre-code{width:calc(97% - 15px);}
+            .code-wrap .inline-pre-code code{width:auto;}
             .code-wrap pre code,.code-wrap .inline-pre-code{text-align: center;margin:0px auto;}
             .code-wrap.code-wrap--algnleft pre code,.code-wrap.code-wrap--algnleft .inline-pre-code{text-align:left;}
             .code-wrap.code-wrap--bottom-mar pre code,.code-wrap.code-wrap--bottom-mar .inline-pre-code{margin-bottom:15px;}
+            .code-wrap.code-wrap--bottom-mar .inline-pre-code code{margin-bottom:0px;}
 
             .reveal section .gitpadd{display:inline;padding-left:18px;}
             .reveal section .gitpadd img{display:inline;box-shadow:none;border:none;background-color:#ffffff;width:45px;margin:0px;padding:3px}
@@ -192,7 +193,7 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1 style="text-transform:none;font-size:2.15em;"><span class="telus-text telus-green">TELUS</span>.<span class="telus-purple">h@ck</span>(<span style="color:#e9d62c;">day</span>, '<span class="telus-pink">node</span>');</h1>
+					<h1 style="text-transform:none;font-size:2.15em;"><span class="BOM-text BOM-green">BOM</span>.<span class="BOM-purple">h@ck</span>(<span style="color:#e9d62c;">day</span>, '<span class="BOM-pink">node</span>');</h1>
 					<h2>Rock &amp; Roll Node.js</h2>
                     <div class="short-link"><a href="https://git.io/vPUsh" target="_blank" class="short-git"><span class="short-host">git.io</span><span class="short-path">/vPUsh</span></a> | <a href="http://bit.ly/2d541RU" target="_blank" class="short-bit"><span class="short-host">bit.ly</span><span class="short-path">/2d541RU</span></a></div>
                     <!-- https://git.io/vPUsS | http://bit.ly/2dsLPDW -->
@@ -245,9 +246,8 @@
     					<h2><pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div></h2>
 <p class="code-wrap--fauxH fauxH">Init</p>
 <div class="code-wrap code-wrap--algnleft smaller"><pre class="inline-pre-code fs-0-48"><code class="bash" data-trim>cd ~/projects &amp;&amp; mkdir &lt;pkg-name&gt; &amp;&amp; cd &lt;pkg-name&gt;/ &amp;&amp;
-git init &amp;&amp; git push -u origin master &amp;&amp;
-git remote add origin https://github.com/username/PRE-repo.git &amp;&amp;
-npm init</code></pre></div>
+git init &amp;&amp; npm init &amp;&amp; git add --all &amp;&amp; git push -u origin master &amp;&amp;
+git remote add origin https://github.com/username/PRE-repo.git</code></pre></div>
 <p class="code-wrap--fauxH fauxH">Development</p>
 <div class="code-wrap code-wrap--algnleft smaller"><pre class="inline-pre-code fs-0-48"><code class="bash" data-trim>npm install &lt;new-module&gt; --save-dev &amp;&amp;
 git add package.json &amp;&amp;
@@ -264,11 +264,14 @@ git push</code></pre></div>
 <p class="code-wrap--fauxH fauxH smaller">Setup Project Folder</p>
 <div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar"><pre class="inline-pre-code fs-0-48"><code class="bash" data-trim>cd ~/projects &amp;&amp; mkdir &lt;pkg-name&gt; &amp;&amp; cd &lt;pkg-name&gt;/</code></pre></div>
 <p class="code-wrap--fauxH fauxH smaller">Setup git</p>
-<div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar"><pre class="inline-pre-code fs-0-48"><code class="bash" data-trim>git init &amp;&amp; git push -u origin master</code></pre></div>
-<p class="code-wrap--fauxH fauxH smaller">Set git to your repo</p>
-<div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar"><pre class="inline-pre-code fs-0-48"><code class="bash" data-trim>git remote add origin https://github.com/username/PRE-repo.git</code></pre></div>
+<div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar"><pre class="inline-pre-code fs-0-48"><code class="bash" data-trim>git init</code></pre></div>
 <p class="code-wrap--fauxH fauxH smaller">Create your node project file (Wizard)</p>
 <div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar"><pre class="inline-pre-code fs-0-48"><code class="bash" data-trim>npm init</code></pre></div>
+<p class="code-wrap--fauxH fauxH smaller">Setup add files and git branch default</p>
+<div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar"><pre class="inline-pre-code fs-0-48"><code class="bash" data-trim>git add --all &amp;&amp; git push -u origin master</code></pre></div>
+<p class="code-wrap--fauxH fauxH smaller">Set git to your repo</p>
+<div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar"><pre class="inline-pre-code fs-0-48"><code class="bash" data-trim>git remote add origin https://github.com/username/PRE-repo.git</code></pre></div>
+
                     </section>
                     <section>
         					<h2>Development<pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div></h2>
@@ -470,7 +473,7 @@ git push</code></pre></div>
 
                 <section>
                     <section data-transition="fade-in">
-                    <h2 style="text-transform:none"><span class="telus-text telus-green">#tags</span> ( <pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div> ) </h2>
+                    <h2 style="text-transform:none"><span class="BOM-text BOM-green">#tags</span> ( <pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div> ) </h2>
 <div class="code-wrap code-wrap--algnleft"><pre class="inline-pre-code fs-0-48"><code class="json" data-trim>{
   "dependencies": {
     "modulename":"https://github.com/username/PRE-repo.git#v0.0.1"
@@ -479,7 +482,7 @@ git push</code></pre></div>
                     <div class="short-link"><a href="https://git.io/vPqx9" target="_blank" class="short-git"><span class="short-host">git.io</span><span class="short-path">/vPqx9</span></a> | <a href="http://bit.ly/2cLrIuQ" target="_blank" class="short-bit"><span class="short-host">bit.ly</span><span class="short-path">/2cLrIuQ</span></a></div>
                     </section>
                     <section data-transition="fade-in">
-                    <h2 style="text-transform:none"><span class="telus-text telus-green">#tags</span> ( <pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div> ) </h2>
+                    <h2 style="text-transform:none"><span class="BOM-text BOM-green">#tags</span> ( <pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div> ) </h2>
                     <p class="code-wrap--fauxH fauxH smaller">Your Module</p>
 <div class="code-wrap code-wrap--algnleft"><pre class="inline-pre-code fs-0-48"><code class="json" data-trim>{
   "name": "node-default-server",
@@ -487,7 +490,7 @@ git push</code></pre></div>
 }</code></pre></div>
                     </section>
                     <section data-transition="fade-in">
-                    <h2 style="text-transform:none"><span class="telus-text telus-green">#tags</span> ( <pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div> ) </h2>
+                    <h2 style="text-transform:none"><span class="BOM-text BOM-green">#tags</span> ( <pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div> ) </h2>
                     <p class="code-wrap--fauxH fauxH smaller">My Application</p>
 <div class="code-wrap code-wrap--algnleft" style="font-size:85%;"><pre class="inline-pre-code fs-0-48"><code class="json" data-noescape>{
   "dependencies": {
@@ -500,7 +503,7 @@ git push</code></pre></div>
 }</code></pre></div>
                     </section>
                     <section data-transition="fade-in">
-                    <h2 style="text-transform:none"><span class="telus-text telus-green">#tags</span> ( <pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div> ) </h2>
+                    <h2 style="text-transform:none"><span class="BOM-text BOM-green">#tags</span> ( <pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div> ) </h2>
                     <p class="code-wrap--fauxH fauxH smaller">Inside My Application's index.js (eventually)</p>
 <div class="code-wrap code-wrap--algnleft"><pre class="inline-pre-code fs-0-48"><code class="javascript" data-trim>var defaultServer = require('node-default-server');
 // ...
@@ -515,7 +518,7 @@ var my_server = new defaultServer({
                 </section>
                 <section id="workflow">
                     <section data-transition="fade-in">
-                    <h2 style="text-transform:none"><span class="telus-text telus-green">#tags</span> ( <pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div> ) <span class="telus-purple">.workflow</span></h2>
+                    <h2 style="text-transform:none"><span class="BOM-text BOM-green">#tags</span> ( <pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div> ) <span class="BOM-purple">.workflow</span></h2>
                     <p class="code-wrap--fauxH fauxH smaller">Before pushing your module feature (package.json)</p>
 <div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar" style="font-size:75%;"><pre class="inline-pre-code fs-0-48"><code class="json" data-noescape>{
   "name": "node-default-server",
@@ -534,7 +537,7 @@ var my_server = new defaultServer({
                     </section>
 
                     <section data-transition="fade-in">
-                    <h2 style="text-transform:none"><span class="telus-text telus-green">#tags</span> ( <pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div> ) <span class="telus-purple">.workflow</span></h2>
+                    <h2 style="text-transform:none"><span class="BOM-text BOM-green">#tags</span> ( <pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div> ) <span class="BOM-purple">.workflow</span></h2>
                     <p class="code-wrap--fauxH fauxH smaller">Before pushing your feature (package.json)</p>
 <div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar"><pre class="inline-pre-code fs-0-48"><code class="json" data-noescape>{
   "name": "node-default-server",
@@ -552,7 +555,7 @@ git push</code></pre></div>
 
 
                     <section data-transition="fade-in">
-                    <h2 style="text-transform:none"><span class="telus-text telus-green">#tags</span> ( <pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div> ) <span class="telus-purple">.workflow</span></h2>
+                    <h2 style="text-transform:none"><span class="BOM-text BOM-green">#tags</span> ( <pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div> ) <span class="BOM-purple">.workflow</span></h2>
                     <p class="code-wrap--fauxH fauxH smaller">After pushing - git tag your repo</p>
 <div class="code-wrap code-wrap--algnleft code-wrap--bottom-mar"><pre class="inline-pre-code fs-0-48"><code class="bash" data-noescape>git tag -a v0.0.1 -m "Publishing Version v0.0.1" &amp;&amp; git push origin --tags</code></pre></div>
                     <div class="fragment">
@@ -571,7 +574,7 @@ git push origin --tags</code></pre></div>
 
 
                     <section data-transition="fade-in">
-                    <h2 style="text-transform:none"><span class="telus-text telus-green">#tags</span> ( <pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div> ) <span class="telus-purple">.workflow</span></h2>
+                    <h2 style="text-transform:none"><span class="BOM-text BOM-green">#tags</span> ( <pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div> ) <span class="BOM-purple">.workflow</span></h2>
                     <p class="code-wrap--fauxH fauxH smaller">Your Application Module Update (package.json)</p>
 <div class="code-wrap code-wrap--algnleft" style="font-size:85%;"><pre class="inline-pre-code fs-0-48"><code class="json" data-noescape>{
   "dependencies": {
@@ -587,7 +590,7 @@ npm update</code></pre></div>
                     </section>
 
                     <section data-transition="fade-in">
-                    <h2 style="text-transform:none"><span class="telus-text telus-green">#tags</span> ( <pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div> ) <span class="telus-purple">.workflow</span></h2>
+                    <h2 style="text-transform:none"><span class="BOM-text BOM-green">#tags</span> ( <pre class="force-normal-case inline-pre-code fs-0-48"><code class="css" data-trim>package.json</code></pre><div class="gitpadd"> + <img src="../img/githublogo.svg"/></div> ) <span class="BOM-purple">.workflow</span></h2>
                         <p class="code-wrap--fauxH fauxH smaller">Nuke the modules</p>
 <div class="code-wrap code-wrap--algnleft"><pre class="inline-pre-code fs-0-48"><code class="bash" data-trim>sudo rm -rf node_modules/ &amp;&amp; sudo rm -rf ~/.npm/ &amp;&amp; npm cache clear &amp;&amp; npm update</code></pre></div>
                         <img src="img/nuke.gif" class="borderless-img"/>
@@ -823,7 +826,7 @@ do_init();
 
 				<section data-transition="fade-in">
 					<h2>Flex Box</h2>
-					<p>A <span class="m-grey" style="text-decoration:line-through;">fantastic modern CSS3</span> <span class="telus-pink" style="font-weight:700;">good enough</span> layout system.</p>
+					<p>A <span class="m-grey" style="text-decoration:line-through;">fantastic modern CSS3</span> <span class="BOM-pink" style="font-weight:700;">good enough</span> layout system.</p>
 
 					<div style="text-align:left;width:46%;margin-left:auto;margin-right:auto;float:left;">
 
@@ -969,7 +972,7 @@ do_init();
 					<h2 style="text-transform:none;"><span class="code-title">flex-start</span><br/>Confused?!</h2>
 					<div style="float:left;width:63%;text-align: left;">
 						<div style="float:left;margin-bottom:25px;">
-							<h6 style="text-transform:none;" class="fs-0-68 telus-purple"><span class="code-title">justify-content<span class="m-grey">:</span></span></h6>
+							<h6 style="text-transform:none;" class="fs-0-68 BOM-purple"><span class="code-title">justify-content<span class="m-grey">:</span></span></h6>
 							<ul class="fs-0-68">
 								<li>flex-start</li>
 								<li>flex-end</li>
@@ -979,7 +982,7 @@ do_init();
 							</ul>
 						</div>
 						<div style="float:left;margin-left:25px;margin-bottom:25px;">
-							<h6 style="text-transform:none;" class="fs-0-68 telus-purple"><span class="code-title">align-items<span class="m-grey">:</span></span></h6>
+							<h6 style="text-transform:none;" class="fs-0-68 BOM-purple"><span class="code-title">align-items<span class="m-grey">:</span></span></h6>
 							<ul class="fs-0-68">
 								<li>flex-start</li>
 								<li>flex-end</li>
@@ -989,7 +992,7 @@ do_init();
 							</ul>
 						</div>
 						<div style="clear:both;">
-							<h6 style="text-transform:none;" class="fs-0-68 telus-purple"><span class="code-title">align-content<span class="m-grey">:</span></span></h6>
+							<h6 style="text-transform:none;" class="fs-0-68 BOM-purple"><span class="code-title">align-content<span class="m-grey">:</span></span></h6>
 							<ul class="fs-0-68">
 								<li>flex-start</li>
 								<li>flex-end</li>
@@ -1006,33 +1009,33 @@ do_init();
 
 				<section class="confused-section">
 					<section class="top370" data-transition="fade-in fade-out">
-						<h2 style="text-transform:none;" class="telus-purple fs-0-68"><span class="code-title">justify-content<span class="m-grey">:</span></span></h2>
+						<h2 style="text-transform:none;" class="BOM-purple fs-0-68"><span class="code-title">justify-content<span class="m-grey">:</span></span></h2>
 						<blockquote cite="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">This defines the alignment along the main axis. It helps distribute extra free space left over when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size. It also exerts some control over the alignment of items when they overflow the line.</blockquote>
 						<div class="diagram-wrapper"><img src="img/justify-content.svg" class="plain-img" /></div>
 						<img src="img/flex_terms_main_axis.png" class="fragment" style="float: left;border: none;background: none;" />
 					</section>
 					<section class="top370" data-transition="fade-in fade-out">
-						<h2 style="text-transform:none;" class="telus-purple fs-0-68"><span class="code-title">justify-content<span class="m-grey">:</span> <span class="telus-pink">flex-start</span><span class="m-grey">;</span></span></h2>
+						<h2 style="text-transform:none;" class="BOM-purple fs-0-68"><span class="code-title">justify-content<span class="m-grey">:</span> <span class="BOM-pink">flex-start</span><span class="m-grey">;</span></span></h2>
 						<blockquote cite="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">(default) items are packed toward the start line</blockquote>
 						<div class="diagram-wrapper"><img src="img/justify-content.svg" class="plain-img" /><div class="-box" style="top: 3%;left: 0.5%;width: 96%;height: 17%;"></div></div>
 					</section>
 					<section class="top370" data-transition="fade-in fade-out">
-						<h2 style="text-transform:none;" class="telus-purple fs-0-68"><span class="code-title">justify-content<span class="m-grey">:</span> <span class="telus-pink">flex-end</span><span class="m-grey">;</span></span></h2>
+						<h2 style="text-transform:none;" class="BOM-purple fs-0-68"><span class="code-title">justify-content<span class="m-grey">:</span> <span class="BOM-pink">flex-end</span><span class="m-grey">;</span></span></h2>
 						<blockquote cite="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"> items are packed toward to end line</blockquote>
 						<div class="diagram-wrapper"><img src="img/justify-content.svg" class="plain-img" /><div class="-box" style="top: 22%;left: 0.5%;width: 96%;height: 17%;"></div></div>
 					</section>
 					<section class="top370" data-transition="fade-in fade-out">
-						<h2 style="text-transform:none;" class="telus-purple fs-0-68"><span class="code-title">justify-content<span class="m-grey">:</span> <span class="telus-pink">center</span><span class="m-grey">;</span></span></h2>
+						<h2 style="text-transform:none;" class="BOM-purple fs-0-68"><span class="code-title">justify-content<span class="m-grey">:</span> <span class="BOM-pink">center</span><span class="m-grey">;</span></span></h2>
 						<blockquote cite="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"> items are centered along the line</blockquote>
 						<div class="diagram-wrapper"><img src="img/justify-content.svg" class="plain-img" /><div class="-box" style="top: 41%;left: 0.5%;width: 96%;height: 17%;"></div></div>
 					</section>
 					<section class="top370" data-transition="fade-in fade-out">
-						<h2 style="text-transform:none;" class="telus-purple fs-0-68"><span class="code-title">justify-content<span class="m-grey">:</span> <span class="telus-pink">space-between</span><span class="m-grey">;</span></span></h2>
+						<h2 style="text-transform:none;" class="BOM-purple fs-0-68"><span class="code-title">justify-content<span class="m-grey">:</span> <span class="BOM-pink">space-between</span><span class="m-grey">;</span></span></h2>
 						<blockquote cite="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"> items are evenly distributed in the line; first item is on the start line, last item on the end line</blockquote>
 						<div class="diagram-wrapper"><img src="img/justify-content.svg" class="plain-img" /><div class="-box" style="top: 60%;left: 0.5%;width: 96%;height: 17%;"></div></div>
 					</section>
 					<section class="top370" data-transition="fade-in fade-out">
-						<h2 style="text-transform:none;" class="telus-purple fs-0-68"><span class="code-title">justify-content<span class="m-grey">:</span> <span class="telus-pink">space-around</span><span class="m-grey">;</span></span></h2>
+						<h2 style="text-transform:none;" class="BOM-purple fs-0-68"><span class="code-title">justify-content<span class="m-grey">:</span> <span class="BOM-pink">space-around</span><span class="m-grey">;</span></span></h2>
 						<blockquote cite="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"> items are evenly distributed in the line with equal space around them. Note that visually the spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has it's own spacing that applies.</blockquote>
 						<div class="diagram-wrapper"><img src="img/justify-content.svg" class="plain-img" /><div class="-box" style="top: 80%;left: 0.5%;width: 96%;height: 17%;"></div></div>
 					</section>
@@ -1041,33 +1044,33 @@ do_init();
 
 				<section class="confused-section">
 					<section class="top370" data-transition="fade-in fade-out">
-						<h2 style="text-transform:none;" class="telus-purple fs-0-68"><span class="code-title">align-items<span class="m-grey">:</span></span></h2>
+						<h2 style="text-transform:none;" class="BOM-purple fs-0-68"><span class="code-title">align-items<span class="m-grey">:</span></span></h2>
 						<blockquote cite="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">This defines the default behaviour for how flex items are laid out along the cross axis on the current line. Think of it as the justify-content version for the cross-axis (perpendicular to the main-axis).</blockquote>
 						<div class="diagram-wrapper"><img src="img/align-items.svg" class="plain-img" /></div>
 						<img src="img/flex_terms_cross_axis.png" class="fragment" style="float: left;border: none;background: none;" />
 					</section>
 					<section class="top370" data-transition="fade-in fade-out">
-						<h2 style="text-transform:none;" class="telus-purple fs-0-68"><span class="code-title">align-items<span class="m-grey">:</span> <span class="telus-pink">stretch</span><span class="m-grey">;</span></span></h2>
+						<h2 style="text-transform:none;" class="BOM-purple fs-0-68"><span class="code-title">align-items<span class="m-grey">:</span> <span class="BOM-pink">stretch</span><span class="m-grey">;</span></span></h2>
 						<blockquote cite="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">(default) stretch to fill the container (still respect min-width/max-width)</blockquote>
 						<div class="diagram-wrapper"><img src="img/align-items.svg" class="plain-img" /><div class="-box" style="top: 3.75%;left: 0.5%;width: 45.5%;height: 29%;"></div></div>
 					</section>
 					<section class="top370" data-transition="fade-in fade-out">
-						<h2 style="text-transform:none;" class="telus-purple fs-0-68"><span class="code-title">align-items<span class="m-grey">:</span> <span class="telus-pink">center</span><span class="m-grey">;</span></span></h2>
+						<h2 style="text-transform:none;" class="BOM-purple fs-0-68"><span class="code-title">align-items<span class="m-grey">:</span> <span class="BOM-pink">center</span><span class="m-grey">;</span></span></h2>
 						<blockquote cite="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"> items are centered in the cross-axis</blockquote>
 						<div class="diagram-wrapper"><img src="img/align-items.svg" class="plain-img" /><div class="-box" style="top: 3.75%;left: 47.5%;width: 45.5%;height: 29%;"></div></div>
 					</section>
 					<section class="top370" data-transition="fade-in fade-out">
-						<h2 style="text-transform:none;" class="telus-purple fs-0-68"><span class="code-title">align-items<span class="m-grey">:</span> <span class="telus-pink">flex-start</span><span class="m-grey">;</span></span></h2>
+						<h2 style="text-transform:none;" class="BOM-purple fs-0-68"><span class="code-title">align-items<span class="m-grey">:</span> <span class="BOM-pink">flex-start</span><span class="m-grey">;</span></span></h2>
 						<blockquote cite="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">cross-start margin edge of the items is placed on the cross-start line</blockquote>
 						<div class="diagram-wrapper"><img src="img/align-items.svg" class="plain-img" /><div class="-box" style="top: 35.75%;left: 0.5%;width: 45.5%;height: 29%;"></div></div>
 					</section>
 					<section class="top370" data-transition="fade-in fade-out">
-						<h2 style="text-transform:none;" class="telus-purple fs-0-68"><span class="code-title">align-items<span class="m-grey">:</span> <span class="telus-pink">flex-end</span><span class="m-grey">;</span></span></h2>
+						<h2 style="text-transform:none;" class="BOM-purple fs-0-68"><span class="code-title">align-items<span class="m-grey">:</span> <span class="BOM-pink">flex-end</span><span class="m-grey">;</span></span></h2>
 						<blockquote cite="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">cross-end margin edge of the items is placed on the cross-end line</blockquote>
 						<div class="diagram-wrapper"><img src="img/align-items.svg" class="plain-img" /><div class="-box" style="top: 35.75%;left: 47.5%;width: 45.5%;height: 29%;"></div></div>
 					</section>
 					<section class="top370" data-transition="fade-in fade-out">
-						<h2 style="text-transform:none;" class="telus-purple fs-0-68"><span class="code-title">align-items<span class="m-grey">:</span> <span class="telus-pink">space-between</span><span class="m-grey">;</span></span></h2>
+						<h2 style="text-transform:none;" class="BOM-purple fs-0-68"><span class="code-title">align-items<span class="m-grey">:</span> <span class="BOM-pink">space-between</span><span class="m-grey">;</span></span></h2>
 						<blockquote cite="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">items are aligned such as their baselines align</blockquote>
 						<div class="diagram-wrapper"><img src="img/align-items.svg" class="plain-img" /><div class="-box" style="top: 68%;left: 0.5%;width: 96%;height: 29%;"></div></div>
 					</section>
@@ -1076,7 +1079,7 @@ do_init();
 
 				<section class="confused-section">
 					<section class="top370" data-transition="fade-in fade-out">
-						<h2 style="text-transform:none;" class="telus-purple fs-0-68"><span class="code-title">align-content<span class="m-grey">:</span></span></h2>
+						<h2 style="text-transform:none;" class="BOM-purple fs-0-68"><span class="code-title">align-content<span class="m-grey">:</span></span></h2>
 						<blockquote cite="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">This aligns a flex container's lines within when there is extra space in the cross-axis, similar to how justify-content aligns individual items within the main-axis.
 
                             <br/><br/>Note: this property has no effect when there is only one line of flex items.</blockquote>
@@ -1084,32 +1087,32 @@ do_init();
 						<img src="img/flex_terms_cross_axis_multi.png" class="fragment" style="float: left;border: none;background: none;" />
 					</section>
 					<section class="top370" data-transition="fade-in fade-out">
-						<h2 style="text-transform:none;" class="telus-purple fs-0-68"><span class="code-title">align-content<span class="m-grey">:</span> <span class="telus-pink">stretch</span><span class="m-grey">;</span></span></h2>
+						<h2 style="text-transform:none;" class="BOM-purple fs-0-68"><span class="code-title">align-content<span class="m-grey">:</span> <span class="BOM-pink">stretch</span><span class="m-grey">;</span></span></h2>
 						<blockquote cite="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"> (default) lines stretch to take up the remaining space</blockquote>
 						<div class="diagram-wrapper"><img src="img/align-content.svg" class="plain-img" /><div class="-box" style="top: 3.75%;left: 0.5%;width: 45.5%;height: 29%;"></div></div>
 					</section>
 					<section class="top370" data-transition="fade-in fade-out">
-						<h2 style="text-transform:none;" class="telus-purple fs-0-68"><span class="code-title">align-content<span class="m-grey">:</span> <span class="telus-pink">center</span><span class="m-grey">;</span></span></h2>
+						<h2 style="text-transform:none;" class="BOM-purple fs-0-68"><span class="code-title">align-content<span class="m-grey">:</span> <span class="BOM-pink">center</span><span class="m-grey">;</span></span></h2>
 						<blockquote cite="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">lines packed to the center of the container</blockquote>
 						<div class="diagram-wrapper"><img src="img/align-content.svg" class="plain-img" /><div class="-box" style="top: 3.75%;left: 47.5%;width: 45.5%;height: 29%;"></div></div>
 					</section>
 					<section class="top370" data-transition="fade-in fade-out">
-						<h2 style="text-transform:none;" class="telus-purple fs-0-68"><span class="code-title">align-content<span class="m-grey">:</span> <span class="telus-pink">flex-start</span><span class="m-grey">;</span></span></h2>
+						<h2 style="text-transform:none;" class="BOM-purple fs-0-68"><span class="code-title">align-content<span class="m-grey">:</span> <span class="BOM-pink">flex-start</span><span class="m-grey">;</span></span></h2>
 						<blockquote cite="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">lines packed to the start of the container</blockquote>
 						<div class="diagram-wrapper"><img src="img/align-content.svg" class="plain-img" /><div class="-box" style="top: 35.75%;left: 0.5%;width: 45.5%;height: 29%;"></div></div>
 					</section>
 					<section class="top370" data-transition="fade-in fade-out">
-						<h2 style="text-transform:none;" class="telus-purple fs-0-68"><span class="code-title">align-content<span class="m-grey">:</span> <span class="telus-pink">flex-end</span><span class="m-grey">;</span></span></h2>
+						<h2 style="text-transform:none;" class="BOM-purple fs-0-68"><span class="code-title">align-content<span class="m-grey">:</span> <span class="BOM-pink">flex-end</span><span class="m-grey">;</span></span></h2>
 						<blockquote cite="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">lines packed to the end of the container</blockquote>
 						<div class="diagram-wrapper"><img src="img/align-content.svg" class="plain-img" /><div class="-box" style="top: 35.75%;left: 47.5%;width: 45.5%;height: 29%;"></div></div>
 					</section>
 					<section class="top370" data-transition="fade-in fade-out">
-						<h2 style="text-transform:none;" class="telus-purple fs-0-68"><span class="code-title">align-content<span class="m-grey">:</span> <span class="telus-pink">space-between</span><span class="m-grey">;</span></span></h2>
+						<h2 style="text-transform:none;" class="BOM-purple fs-0-68"><span class="code-title">align-content<span class="m-grey">:</span> <span class="BOM-pink">space-between</span><span class="m-grey">;</span></span></h2>
 						<blockquote cite="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">lines evenly distributed; the first line is at the start of the container while the last one is at the end</blockquote>
 						<div class="diagram-wrapper"><img src="img/align-content.svg" class="plain-img" /><div class="-box" style="top: 68%;left: 0.5%;width: 45.5%;height: 29%;"></div></div>
 					</section>
 					<section class="top370" data-transition="fade-in fade-out">
-						<h2 style="text-transform:none;" class="telus-purple fs-0-68"><span class="code-title">align-content<span class="m-grey">:</span> <span class="telus-pink">space-around</span><span class="m-grey">;</span></span></h2>
+						<h2 style="text-transform:none;" class="BOM-purple fs-0-68"><span class="code-title">align-content<span class="m-grey">:</span> <span class="BOM-pink">space-around</span><span class="m-grey">;</span></span></h2>
 						<blockquote cite="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">lines evenly distributed with equal space around each line</blockquote>
 						<div class="diagram-wrapper"><img src="img/align-content.svg" class="plain-img" /><div class="-box" style="top: 68%;left: 47.5%;width: 45.5%;height: 29%;"></div></div>
 					</section>
@@ -1175,13 +1178,13 @@ do_init();
 
 				<section class="confused-section">
 					<section class="top370" data-transition="fade-in fade-out">
-						<h2 style="text-transform:none;" class="telus-purple fs-0-68"><span class="code-title">flex-grow<span class="m-grey">:</span></span></h2>
+						<h2 style="text-transform:none;" class="BOM-purple fs-0-68"><span class="code-title">flex-grow<span class="m-grey">:</span></span></h2>
 						<blockquote cite="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">This defines the alignment along the main axis. It helps distribute extra free space left over when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size. It also exerts some control over the alignment of items when they overflow the line.</blockquote>
 						<div class="diagram-wrapper"><img src="img/justify-content.svg" class="plain-img" /></div>
 						<img src="img/flex_terms_main_axis.png" class="fragment" style="float: left;border: none;background: none;" />
 					</section>
 					<section class="top370" data-transition="fade-in fade-out">
-						<h2 style="text-transform:none;" class="telus-purple fs-0-68"><span class="code-title">flex-grow<span class="m-grey">:</span> <span class="telus-pink">xxxxx</span><span class="m-grey">;</span></span></h2>
+						<h2 style="text-transform:none;" class="BOM-purple fs-0-68"><span class="code-title">flex-grow<span class="m-grey">:</span> <span class="BOM-pink">xxxxx</span><span class="m-grey">;</span></span></h2>
 						<blockquote cite="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"> (default) lines stretch to take up the remaining space</blockquote>
 						<div class="diagram-wrapper"><img src="img/align-content.svg" class="plain-img" /><div class="-box" style="top: 3.75%;left: 0.5%;width: 45.5%;height: 29%;"></div></div>
 					</section>
